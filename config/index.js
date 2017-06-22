@@ -23,21 +23,21 @@ module.exports = {
   },
   dev: {
     env: require('./dev.env'),
-    port: 8080,
+    port: 3000,
     autoOpenBrowser: true,
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
     proxyTable: {
-      '/event': {
-        // https就会报错Error occurred while trying to proxy request /api/user/activity/million300 from localhost:8080 to https://www.itouzi.com/ (CERT_HAS_EXPIRED) (https://nod ejs.org/api/errors.html#errors_common_system_errors)
-        target: 'http://www.itouzi.com/',
-        changeOrigin: true
-      },
+      // '/event': {
+      //   // https就会报错Error occurred while trying to proxy request /api/user/activity/million300 from localhost:8080 to https://www.itouzi.com/ (CERT_HAS_EXPIRED) (https://nod ejs.org/api/errors.html#errors_common_system_errors)
+      //   target: 'http://www.itouzi.com/',
+      //   changeOrigin: true
+      // },
 
-      '/newwap': {
-        target: 'http://www.itouzi.com/',
-        changeOrigin: true
-      }
+      // '/newwap': {
+      //   target: 'http://www.itouzi.com/',
+      //   changeOrigin: true
+      // }
     },
     // CSS Sourcemaps off by default because relative paths are "buggy"
     // with this option, according to the CSS-Loader README

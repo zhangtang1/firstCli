@@ -25,44 +25,44 @@ var app = express()
 
 // --------自己加的接口-------------------------------------------------
 
-// var appData = require('../db.json');
-// var sites = appData.sites;
-// var newans = appData.newans;
-// var hotans = appData.hotans;
-// var waitans = appData.waitans;
-// var apiRoutes = express.Router();
+var appData = require('../db.json');
+var sites = appData.sites;
+var newans = appData.newans;
+var hotans = appData.hotans;
+var waitans = appData.waitans;
+var apiRoutes = express.Router();
 
-// apiRoutes.get('/msgs', function(req, res) {
-//   res.json({
-//     errno: 0,
-//     data: sites,
-//   });
-// });
-// apiRoutes.post('/msgs', function(req, res) {
-//   res.json({
-//     errno: 0,
-//     data: sites,
-//   });
-// });
-// apiRoutes.get('/newans', function(req, res) {
-//   res.json({
-//     errno: 0,
-//     data: newans,
-//   });
-// });
-// apiRoutes.get('/hotans', function(req, res) {
-//   res.json({
-//     errno: 0,
-//     data: hotans,
-//   });
-// });
-// apiRoutes.get('/waitans', function(req, res) {
-//   res.json({
-//     errno: 0,
-//     data: waitans,
-//   });
-// });
-// app.use('/api', apiRoutes);
+apiRoutes.get('/msgs', function(req, res) {
+  res.json({
+    code: 0,
+    data: sites,
+  });
+});
+apiRoutes.post('/msgs', function(req, res) {
+  res.json({
+    errno: 0,
+    data: sites,
+  });
+});
+apiRoutes.get('/newans', function(req, res) {
+  res.json({
+    errno: 0,
+    data: newans,
+  });
+});
+apiRoutes.get('/hotans', function(req, res) {
+  res.json({
+    errno: 0,
+    data: hotans,
+  });
+});
+apiRoutes.get('/waitans', function(req, res) {
+  res.json({
+    errno: 0,
+    data: waitans,
+  });
+});
+app.use('/api', apiRoutes);
 
 // --------自己加的接口-------------------------------------------------
 

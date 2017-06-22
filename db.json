@@ -1,82 +1,29 @@
 {
-    "sites": [{
-        "isResolved": false,
+    "sites": {
+        "data": {
+            "base_url": "https://www.itouzi.com",
+            "activity_status": 0,
+            "qualification": 1,
+            "beat": 10,
+            "ranking": 0,
+            "login": 1,
+            "is_have": 0,
+            "end_time": "2017年6月20日23:00:07",
 
-        "ansNum": 0,
-        "status": "回答",
-
-        "name": "豆腐干",
-        "time": 1,
-
-        "des": "Android如何实现菜单和沉浸式状态栏共存？",
-        "spe": ["php", "node.js", "java", "javascript", "html"]
-    }, {
-        "isResolved": false,
-
-        "ansNum": 0,
-        "status": "回答",
-
-        "name": "豆腐干",
-        "time": 1,
-
-        "des": "Android如何实现菜单和沉浸式状态栏共存？",
-        "spe": ["php", "node.js", "java", "javascript", "html"]
-    }, {
-        "isResolved": true,
-
-        "ansNum": 1,
-        "status": "回答",
-
-        "name": "豆腐干",
-        "time": 1,
-
-        "des": "Android如何实现菜单和沉浸式状态栏共存？",
-        "spe": ["php", "node.js", "java", "javascript", "html"]
-    }, {
-        "isResolved": false,
-
-        "ansNum": 1,
-        "status": "回答",
-
-        "name": "豆腐干",
-        "time": 1,
-
-        "des": "Android如何实现菜单和沉浸式状态栏共存？",
-        "spe": ["php", "node.js", "java", "javascript", "html"]
-    }, {
-        "isResolved": false,
-
-        "ansNum": 1,
-        "status": "回答",
-
-        "name": "豆腐干",
-        "time": 1,
-
-        "des": "Android如何实现菜单和沉浸式状态栏共存？",
-        "spe": ["php", "node.js", "java", "javascript", "html"]
-    }, {
-        "isResolved": false,
-
-        "ansNum": 1,
-        "status": "回答",
-
-        "name": "豆腐干",
-        "time": 1,
-
-        "des": "Android如何实现菜单和沉浸式状态栏共存？",
-        "spe": ["php", "node.js", "java", "javascript", "html"]
-    }, {
-        "isResolved": false,
-
-        "ansNum": 0,
-        "status": "回答",
-
-        "name": "豆腐干",
-        "time": 1,
-
-        "des": "Android如何实现菜单和沉浸式状态栏共存？",
-        "spe": ["php", "node.js", "java", "javascript", "html"]
-    }],
+            "goods": {
+                "0": 0,
+                "1": 1,
+                "2": 0,
+                "3": 0,
+                "4": 0,
+                "5": 1,
+                "6": 0,
+                "7": 0,
+                "8": 0,
+                "9": 1
+            }
+        }
+    },
 
     "newans": [{
         "isResolved": false,

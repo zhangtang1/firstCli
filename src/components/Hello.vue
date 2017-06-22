@@ -21,17 +21,17 @@
         <div v-if="isShow" class="shadow" @touchstart="stop">
             <img src="../assets/bgSd.png" alt="">
             <ul class="prizeBox">
-                <li>
+                <li v-if="should[0] != null">
                     <span>{{ prizeMsg[should[0]].cnt }}</span>
                     <i>{{ prizeMsg[should[0]].type }}</i>
                     <img src="../assets/red.png" alt="">
                 </li>
-                <li v-if="should[1]">
+                <li v-if="should[1] != null">
                     <span>{{ prizeMsg[should[1]].cnt }}</span>
                     <i>{{ prizeMsg[should[1]].type }}</i>
                     <img src="../assets/blue.png" alt="">
                 </li>
-                <li v-if="should[2]">
+                <li v-if="should[2] != null">
                     <span>{{ prizeMsg[should[2]].cnt }}</span>
                     <i>{{ prizeMsg[should[2]].type }}</i>
                     <img src="../assets/yellow.png" alt="">
@@ -171,7 +171,7 @@ export default {
         var that = this; 
 
         $.ajax({
-            url: '/newwap/ajax/million300',
+            url: '/api/msgs/',
             type: 'GET',
             data: {},
             dataType: 'json',
@@ -179,7 +179,8 @@ export default {
                 that.loading = false;
                 if (res.code == 0) {
                     console.log(res);
-                    that.data = res.data;
+                    // that.data = res.data;
+                    that.data = res.data.data;
                 } else {
                     that.error = true;
                     setTimeout(function() {
@@ -230,10 +231,10 @@ export default {
                 base_url: 'https://www.itouzi.com',
 
                 // 0 活动状态，0：进行中，1：未开始，2：已结束
-                activity_status: 1,
+                activity_status: 0,
 
                 // 0 是否有资格 0：没有资格，1：有资格
-                qualification: 0,
+                qualification: 1,
                 
                 // 击败人数
                 beat: 10,
@@ -242,7 +243,7 @@ export default {
                 ranking: 0,
                 
                 // 是否登录 0：未登录，1：已经登录
-                login: 0,
+                login: 1,
                 
                 // 是否领券 0：未领券 ，1：已经领券
                 is_have: 0,
@@ -366,30 +367,32 @@ export default {
         // 领券奖品
         takePrize: function() {
             var that = this;
+            that.isShow = true;
+            that.data.is_have = 1;
 
-            $.ajax({
-                url: '/event/ajax/get300MillionGoods',
-                type: 'GET',
-                data: {},
-                dataType: 'json',
-                success: function(res) {
-                    if (res.code == 0) {
-                        that.isShow = true;
-                        that.data.is_have = 1;
-                    } else {
-                        that.error = true;
-                        setTimeout(function() {
-                            that.error = false;
-                        }, 2500);
-                    }
-                },
-                error: function(err) {
-                    that.error = true;
-                    setTimeout(function() {
-                        that.error = false;
-                    }, 2500);
-                },
-            });
+            // $.ajax({
+            //     url: '/event/ajax/get300MillionGoods',
+            //     type: 'GET',
+            //     data: {},
+            //     dataType: 'json',
+            //     success: function(res) {
+            //         if (res.code == 0) {
+            //             that.isShow = true;
+            //             that.data.is_have = 1;
+            //         } else {
+            //             that.error = true;
+            //             setTimeout(function() {
+            //                 that.error = false;
+            //             }, 2500);
+            //         }
+            //     },
+            //     error: function(err) {
+            //         that.error = true;
+            //         setTimeout(function() {
+            //             that.error = false;
+            //         }, 2500);
+            //     },
+            // });
         }
     },
 
